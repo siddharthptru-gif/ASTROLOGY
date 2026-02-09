@@ -1,0 +1,93 @@
+/* 
+ * 🔮 GLOBAL CSS VARIABLES & UTILITIES
+ * Specific overrides that complement Tailwind
+ */
+
+:root {
+  --header-height: 64px;
+  --nav-height: 80px;
+  --safe-top: env(safe-area-inset-top, 20px);
+  --safe-bottom: env(safe-area-inset-bottom, 20px);
+  
+  /* Z-Index Layers */
+  --z-back: -1;
+  --z-base: 0;
+  --z-nav: 50;
+  --z-overlay: 100;
+  --z-modal: 1000;
+  --z-toast: 2000;
+}
+
+/* 
+ * 📱 MOBILE OPTIMIZATIONS 
+ */
+
+/* Prevent pull-to-refresh on mobile (handled by app logic if needed) */
+body {
+  overscroll-behavior-y: none;
+}
+
+/* Better tap highlights */
+* {
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* 
+ * 🎨 TYPOGRAPHY OVERRIDES 
+ */
+h1, h2, h3, h4, h5, h6 {
+  letter-spacing: -0.02em;
+}
+
+p {
+  letter-spacing: 0.01em;
+}
+
+/* 
+ * 🖼️ IMAGE HANDLING 
+ */
+.img-cover {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* 
+ * 🖱️ INTERACTION STATES 
+ */
+.active-press:active {
+  transform: scale(0.96);
+  transition: transform 0.1s ease;
+}
+
+/* 
+ * 📜 SCROLL CONTAINERS 
+ */
+.scroll-container {
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+  overscroll-behavior: contain;
+}
+
+.horizontal-scroll {
+  display: flex;
+  overflow-x: auto;
+  gap: 1rem;
+  padding: 0 1rem;
+  -webkit-overflow-scrolling: touch;
+  scroll-snap-type: x mandatory;
+}
+
+.horizontal-scroll > * {
+  scroll-snap-align: center;
+  flex-shrink: 0;
+}
+
+/* Hide scrollbar for horizontal scroll areas */
+.horizontal-scroll::-webkit-scrollbar {
+  display: none;
+}
+.horizontal-scroll {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
