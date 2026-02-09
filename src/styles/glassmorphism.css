@@ -1,0 +1,71 @@
+/* 
+ * 🔮 GLASSMORPHISM UTILITIES
+ * Reusable glass effect classes
+ */
+
+/* BASE GLASS */
+.glass {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* HEAVY GLASS (More blur, darker) */
+.glass-heavy {
+  background: rgba(15, 15, 26, 0.6);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+}
+
+/* LIGHT GLASS (Subtle, for overlays) */
+.glass-light {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+/* GLASS CARD (Standard Component) */
+.glass-card {
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0.05) 100%);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+  border-radius: 24px; /* Large rounded corners per requirements */
+}
+
+/* GLASS INPUT FIELDS */
+.glass-input {
+  background: rgba(0, 0, 0, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  color: white;
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  transition: all 0.3s ease;
+}
+
+.glass-input:focus {
+  background: rgba(0, 0, 0, 0.4);
+  border-color: rgba(139, 92, 246, 0.5); /* Primary Purple */
+  box-shadow: 0 0 15px rgba(139, 92, 246, 0.2);
+  outline: none;
+}
+
+/* GLASS BUTTON */
+.glass-btn {
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  transition: all 0.2s ease;
+}
+
+.glass-btn:active {
+  background: rgba(255, 255, 255, 0.2);
+  transform: scale(0.98);
+}
