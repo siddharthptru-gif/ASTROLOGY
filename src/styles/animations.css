@@ -1,0 +1,83 @@
+/* 
+ * 🔮 COMPLEX ANIMATIONS
+ * Animations that require specific keyframes or compositions
+ */
+
+/* 🌌 STAR TWINKLE EFFECT */
+.star-twinkle {
+  position: absolute;
+  background: white;
+  border-radius: 50%;
+  opacity: 0;
+  animation: twinkle var(--duration, 3s) ease-in-out infinite;
+  animation-delay: var(--delay, 0s);
+}
+
+@keyframes twinkle {
+  0% { opacity: 0; transform: scale(0.5); }
+  50% { opacity: var(--opacity, 0.8); transform: scale(1.2); box-shadow: 0 0 10px rgba(255,255,255,0.8); }
+  100% { opacity: 0; transform: scale(0.5); }
+}
+
+/* 🖐️ PALM SCANNER LINE */
+.scanner-line {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background: linear-gradient(90deg, transparent, #22d3ee, transparent);
+  box-shadow: 0 0 20px #22d3ee;
+  animation: scan-move 3s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+  z-index: 20;
+}
+
+@keyframes scan-move {
+  0% { top: 0%; opacity: 0; }
+  10% { opacity: 1; }
+  90% { opacity: 1; }
+  100% { top: 100%; opacity: 0; }
+}
+
+/* 🌀 PORTAL SPIN */
+.portal-spin {
+  animation: spin-portal 20s linear infinite;
+}
+
+@keyframes spin-portal {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+/* 🃏 TAROT CARD SHUFFLE */
+.card-shuffle {
+  animation: shuffle 0.5s ease-in-out;
+}
+
+@keyframes shuffle {
+  0% { transform: translateX(0) rotate(0); }
+  25% { transform: translateX(-20px) rotate(-5deg); }
+  50% { transform: translateX(0) rotate(0) scale(1.05); }
+  75% { transform: translateX(20px) rotate(5deg); }
+  100% { transform: translateX(0) rotate(0); }
+}
+
+/* 🌊 BREATHING GLOW */
+.breath-glow {
+  animation: breath 4s ease-in-out infinite;
+}
+
+@keyframes breath {
+  0%, 100% { box-shadow: 0 0 15px rgba(139, 92, 246, 0.3); }
+  50% { box-shadow: 0 0 30px rgba(139, 92, 246, 0.6); }
+}
+
+/* 💫 FLOATING ELEMENT */
+.floating {
+  animation: float-y 6s ease-in-out infinite;
+}
+
+@keyframes float-y {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
