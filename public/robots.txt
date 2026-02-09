@@ -1,0 +1,10 @@
+# https://www.robotstxt.org/robotstxt.html
+User-agent: *
+Allow: /
+
+# Sitemaps
+Sitemap: https://aipalmreader.app/sitemap.xml
+
+# Disallow specific system directories if necessary
+Disallow: /api/
+Disallow: /admin/
